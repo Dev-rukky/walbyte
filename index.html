@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,34 +8,64 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./asset/css/main.css'>
     <link rel="shortcut icon" href="./asset/svgs/Favicon.svg" type="image/x-icon">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
     <nav>
         <div class="nav-logo">
             <a href="#"><img src="./asset/svgs/Logo.svg" alt=""></a>
         </div>
-        <div class="nav-link" id="nav-menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Experts</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+
+        <div class="nav__menu" id="nav__menus">
+            <div class="nav-link" id="nav-menu">
+                <ul>
+                    <li><a href="#" class="nav__link">Home</a></li>
+                    <li><a href="#" class="nav__link">About Us</a></li>
+                    <li><a href="#" class="nav__link">Services</a></li>
+                    <li><a href="#" class="nav__link">Experts</a></li>
+                    <li><a href="#" class="nav__link">Blog</a></li>
+                    <li><a href="#" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-cta-btn">
+                <a href="#"><button class="login">Login</button></a>
+                <a href="#"><button class="signup">Sign Up</button></a>
+            </div>
         </div>
 
-        <div class="nav-cta-btn">
-            <a href="#"><button class="login">Login</button></a>
-            <a href="#"><button class="signup">Sign Up</button></a>
+        <div class="ham">
+            <button id="hamburger" class="nav-toggle-btn">
+                <span></span>
+                <span></span>
+            </button>
         </div>
-
-        <span class="nav-bar-toggle-open" id="nav_toggle">
-            <i class="fa-solid fa-bars"></i>
-        </span>
     </nav>
 
-    <script src='main.js'></script>
+
+    <section class="banner">
+        <div class="banner-text">
+            <div class="banner-title">
+                <h1>Guiding Your <span class="path">Path</span> to Digital Safety and <span class="str">Strength</span></h1>
+                <p>we provide expert cybersecurity solutions tailored to your unique needs and challenges.</p>
+            </div>
+
+            <div class="banner-cta-btn">
+                <a href="#"><button class="get">Get Started Now <img src="./asset/svgs/ph_arrow-right-light.svg" alt=""></button></a>
+                <a href="#"><button class="explore">Explore Our Services</button></a>
+            </div>
+        </div>
+        <div class="banner-image">
+            <img src="./asset/svgs/Hero Image.svg" alt="">
+        </div>
+    </section>
+
+    <script src='./asset/js/main.js'></script>
     <script src="https://kit.fontawesome.com/b85a8d333b.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
