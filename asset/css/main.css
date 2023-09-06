@@ -461,7 +461,8 @@ button.active span:nth-child(2) {
     }
 
     .about {
-        padding-top: 256px;
+        padding-top: 160px;
+        margin-top: 80px;
     }
 
     .bg-el1 {
@@ -471,6 +472,16 @@ button.active span:nth-child(2) {
 
 
 }
+
+@media only screen and (max-width: 610px) {
+
+.about {
+    padding-top: 120px;
+}
+
+}
+
+
 
 @media only screen and (max-width: 480px) {
     nav {
@@ -492,7 +503,7 @@ button.active span:nth-child(2) {
     }
 
     .about {
-        padding-top: 176px;
+        padding-top: 120px;
     }
 
     .bg-el1 {
