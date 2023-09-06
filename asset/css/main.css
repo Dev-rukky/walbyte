@@ -1,14 +1,14 @@
 @font-face {
     font-family: Gopher;
-    src: url(./asset/fonts/Gopher-Light.ttf) format('ttf');
-    src: url(./asset/fonts/Gopher-Regular.ttf) format('ttf');
-    src: url(./asset/fonts/Gopher-Medium.ttf) format('ttf');
-    src: url(./asset/fonts/Gopher-Bold.ttf) format('ttf');
+    src: url(/asset/Font/Gopher-Light.ttf) format('ttf');
+    src: url(/asset/Font/Gopher-Regular.ttf) format('ttf');
+    src: url(/asset/Font/Gopher-Medium.ttf) format('ttf');
+    src: url(/asset/Font/Gopher-Bold.ttf) format('ttf');
 }
 
 @font-face {
     font-family: Satoshi;
-    src: url(./asset/fonts/Satoshi-Regular.ttf) format('ttf');
+    src: url(/asset/Font/Satoshi-Regular.ttf) format('ttf');
 }
 
 :root {
