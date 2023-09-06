@@ -372,6 +372,98 @@ button.active span:nth-child(2) {
     top: 30%;
 }
 
+.features {
+    padding: 0 84px 120px;
+}
+
+.features-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 4px;
+}
+
+.features-title h3 {
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.features-title p {
+    line-height: 172.329%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
+.text-mask {
+    position: relative;
+    display: inline-block;
+}
+
+.text-mask h1 {
+    font-size: 48px;
+    background: url('/asset/svgs/Vector\ 1.svg'), black;
+    background-repeat: no-repeat;
+    background-position: 56% 30px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+
+
+.feature-1-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 12px;
+}
+
+.feature-1-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.feature-1-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 151.025%;
+    max-width: 438px;
+}
+
+
+.feature-1 {
+    display: flex;
+    padding: 24px 32px;
+    align-items: flex-start;
+    gap: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    background: var(--white);
+}
+
+.feature-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 42px 34px;
+    padding-top: 70px;
+}
+
+
+
+
 
 
 
@@ -443,6 +535,7 @@ button.active span:nth-child(2) {
     .banner {
         flex-wrap: wrap;
         text-align: center;
+        padding-bottom: 80px;
         /* height: 70vh; */
     }
 
@@ -452,8 +545,9 @@ button.active span:nth-child(2) {
     }
 
     .banner-text h1,
-    .about-text h1 {
-        font-size: clamp(24px, 5vw, 36px);
+    .about-text h1,
+    .text-mask h1 {
+        font-size: clamp(30px, 5vw, 40px);
         line-height: 1.4;
     }
 
@@ -467,13 +561,22 @@ button.active span:nth-child(2) {
     }
 
     .bg-el1 {
-        width: 50%;
+        width: 20%;
         top: 60%;
     }
 
 
 }
 
+@media only screen and (max-width: 768px) {
+    .bg-el1 {
+        width: 20%;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 @media only screen and (max-width: 480px) {
@@ -482,7 +585,7 @@ button.active span:nth-child(2) {
     }
 
     .banner {
-        padding: 176px 15px;
+        padding: 176px 15px 80px;
     }
 
     .banner-text p {
@@ -502,5 +605,26 @@ button.active span:nth-child(2) {
     .learn {
         font-size: 14px;
         padding: 12px 20px;
+    }
+
+    .features {
+        padding: 0px 20px 120px;
+    }
+
+    .feature-1-text h3 {
+        font-size: 16px;
+    }
+
+    .feature-1-text p {
+        font-size: 12px;
+    }
+
+    .feature-1 {
+        padding: 10px 20px;
+        gap: 12px;
+    }
+
+    .text-mask {
+        background-position: 56% 20px;
     }
 }
