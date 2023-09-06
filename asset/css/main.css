@@ -12,8 +12,8 @@
 }
 
 :root {
-    --nav-font-family: "Satoshi";
-    --body-font-family: "Gopher";
+    --nav-font-family: 'Satoshi', sans-serif;
+    --body-font-family: 'Gopher', sans-serif;
     --primary-color: #214f6f;
     --secondary-color: #f4a623;
     --black: #000;
