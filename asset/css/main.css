@@ -14,6 +14,7 @@
     text-decoration: none;
     box-sizing: border-box;
     transition: all .5s ease-in;
+    font-family: var(--main-font-family);
     ;
 }
 
@@ -259,20 +260,6 @@ button.active span:nth-child(2) {
     padding: 16px 12px;
 }
 
-
-/* .get:has(img):hover {
-    padding: 16px 12px;
-    width: 100%;
-} */
-
-
-
-
-/* .get:hover, .get img {
-    display: block;
-    padding: 16px 12px;
-} */
-
 .explore {
     padding: 12px 15px;
     border-radius: 4px;
@@ -309,6 +296,81 @@ button.active span:nth-child(2) {
     color: var(--secondary-color);
 }
 
+.about {
+    text-align: center;
+    position: relative;
+    padding: 0px 15px 160px;
+}
+
+.about-text {
+    max-width: 483px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.about-text h1 {
+    font-size: 48px;
+}
+
+.about-text p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 177.525%;
+}
+
+
+.arrow-1 {
+    width: 0;
+}
+
+.arrow-2 {
+    width: 16px;
+}
+
+.about-us-cta-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.learn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 14px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: none;
+    color: var(--white);
+    column-gap: 8px;
+    font-family: var(--main-font-family);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.learn:hover {
+    .arrow-1 {
+        width: 24px;
+    }
+
+    .arrow-2 {
+        width: 0px;
+    }
+
+    padding: 12px 20px;
+}
+
+
+.bg-el1 {
+    position: absolute;
+    right: 0%;
+    top: 30%;
+}
 
 
 
@@ -388,10 +450,26 @@ button.active span:nth-child(2) {
         align-items: center;
     }
 
-    .banner-text h1 {
+    .banner-text h1,
+    .about-text h1 {
         font-size: clamp(24px, 5vw, 36px);
         line-height: 1.4;
     }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about {
+        padding-top: 256px;
+    }
+
+    .bg-el1 {
+        width: 50%;
+        top: 60%;
+    }
+
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -403,8 +481,26 @@ button.active span:nth-child(2) {
         padding: 176px 15px;
     }
 
+    .banner-text p {
+        line-height: 1.8;
+    }
+
     .banner-cta-btn {
         flex-wrap: wrap;
         justify-content: center;
+        row-gap: 16px;
+    }
+
+    .about {
+        padding-top: 176px;
+    }
+
+    .bg-el1 {
+        top: 70%;
+    }
+
+    .learn {
+        font-size: 14px;
+        padding: 12px 20px;
     }
 }
