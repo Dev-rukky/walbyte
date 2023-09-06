@@ -624,7 +624,7 @@ button.active span:nth-child(2) {
         gap: 12px;
     }
 
-    .text-mask {
+    .text-mask h1 {
         background-position: 56% 20px;
     }
 }
