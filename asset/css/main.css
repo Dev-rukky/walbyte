@@ -1,19 +1,4 @@
-@font-face {
-    font-family: Gopher;
-    src: url(/asset/Font/Gopher-Light.ttf) format('ttf');
-    src: url(/asset/Font/Gopher-Regular.ttf) format('ttf');
-    src: url(/asset/Font/Gopher-Medium.ttf) format('ttf');
-    src: url(/asset/Font/Gopher-Bold.ttf) format('ttf');
-}
-
-@font-face {
-    font-family: Satoshi;
-    src: url(/asset/Font/Satoshi-Regular.ttf) format('ttf');
-}
-
 :root {
-    --nav-font-family: 'Satoshi', sans-serif;
-    --body-font-family: 'Gopher', sans-serif;
     --main-font-family: 'Instrument Sans', sans-serif;
     --primary-color: #214f6f;
     --secondary-color: #f4a623;
@@ -96,6 +81,7 @@ nav {
     color: #232323;
     font-family: var(--main-font-family);
     font-size: 14px;
+    cursor: pointer;
 }
 
 .signup {
@@ -110,6 +96,7 @@ nav {
     color: var(--white);
     font-family: var(--main-font-family);
     font-size: 14px;
+    cursor: pointer;
 }
 
 /* .nav-bar-toggle-open {
@@ -123,7 +110,7 @@ nav {
 .login:hover {
     background-color: var(--white);
     border-radius: 4px;
-    box-shadow: 4px 3px 32px 0px rgba(33, 79, 111, 0.24);
+    box-shadow: 4px 3px 32px 0px rgba(134, 187, 225, 0.239);
     border: none;
 }
 
@@ -202,6 +189,7 @@ button.active span:nth-child(2) {
     text-transform: capitalize;
     height: 100vh;
     display: flex;
+    gap: 32px;
     /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
@@ -254,19 +242,36 @@ button.active span:nth-child(2) {
     font-family: var(--main-font-family);
     font-size: 16px;
     width: 196px;
+    cursor: pointer;
 
 }
 
-.get img {
-    display: none;
+.arrow {
+    width: 0;
 
 }
 
+.get:hover {
+    .arrow {
+        width: 24px;
+    }
 
-.get:hover img {
+    padding: 16px 12px;
+}
+
+
+/* .get:has(img):hover {
+    padding: 16px 12px;
+    width: 100%;
+} */
+
+
+
+
+/* .get:hover, .get img {
     display: block;
-    transition: width 300ms;
-}
+    padding: 16px 12px;
+} */
 
 .explore {
     padding: 12px 15px;
@@ -280,6 +285,12 @@ button.active span:nth-child(2) {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+}
+
+.explore:hover {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 
