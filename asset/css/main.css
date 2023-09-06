@@ -188,7 +188,7 @@ button.active span:nth-child(2) {
 .banner {
     font-family: var(--main-font-family);
     text-transform: capitalize;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     gap: 32px;
     /* flex-wrap: wrap; */
@@ -443,7 +443,7 @@ button.active span:nth-child(2) {
     .banner {
         flex-wrap: wrap;
         text-align: center;
-        height: 70vh;
+        /* height: 70vh; */
     }
 
     .banner-title,
@@ -462,8 +462,8 @@ button.active span:nth-child(2) {
     }
 
     .about {
-        padding-top: 160px;
-        margin-top: 80px;
+        /* padding-top: 160px;
+        margin-top: 80px; */
     }
 
     .bg-el1 {
@@ -471,14 +471,6 @@ button.active span:nth-child(2) {
         top: 60%;
     }
 
-
-}
-
-@media only screen and (max-width: 610px) {
-
-.about {
-    padding-top: 120px;
-}
 
 }
 
@@ -501,10 +493,6 @@ button.active span:nth-child(2) {
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 16px;
-    }
-
-    .about {
-        padding-top: 120px;
     }
 
     .bg-el1 {
