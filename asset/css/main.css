@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Gopher;
+    src: url(./asset/fonts/Gopher-Light.ttf) format('ttf');
+    src: url(./asset/fonts/Gopher-Regular.ttf) format('ttf');
+    src: url(./asset/fonts/Gopher-Medium.ttf) format('ttf');
+    src: url(./asset/fonts/Gopher-Bold.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: Satoshi;
+    src: url(./asset/fonts/Satoshi-Regular.ttf) format('ttf');
+}
+
+:root {
+    --nav-font-family: "Satoshi";
+    --body-font-family: "Gopher";
+    --primary-color: #214f6f;
+    --secondary-color: #f4a623;
+    --black: #000;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .5s ease-in;
+    ;
+}
+
+nav {
+    font-family: var(--nav-font-family);
+    position: fixed;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 9875;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 154px;
+    padding: 30px 46px;
+}
+
+.nav-link ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 48px;
+}
+
+.nav-link ul li a {
+    color: var(--black);
+    font-size: 16px;
+}
+
+.nav-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.login {
+    display: flex;
+    width: 96px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: #232323;
+}
+
+.signup {
+    display: flex;
+    width: 96px;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.nav-bar-toggle-open {
+    display: none;
+}
+
+.nav-link ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.login:hover {
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 4px 3px 32px 0px rgba(33, 79, 111, 0.24);
+    border: none;
+}
+
+.signup:hover{
+    background-color: var(--white);
+    border-radius: 4px;
+    box-shadow: 4px 3px 32px 0px rgba(33, 79, 111, 0.24);
+    border: none;
+    color: #232323;
+}
+
+
+
+
+
+
+
+
+
