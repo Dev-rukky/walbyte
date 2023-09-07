@@ -461,6 +461,11 @@ button.active span:nth-child(2) {
     padding-top: 70px;
 }
 
+.feature-1:hover {
+    box-shadow: 8px 5px 0px 0px #214f6f;
+    cursor: pointer;
+}
+
 
 
 
@@ -626,5 +631,9 @@ button.active span:nth-child(2) {
 
     .text-mask h1 {
         background-position: 56% 20px;
+    }
+
+    .feature-1 img {
+        width: 24px;
     }
 }
