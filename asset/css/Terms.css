@@ -1,0 +1,50 @@
+:root {
+    --main-font-family: 'Instrument Sans', sans-serif;
+    --primary-color: #214f6f;
+    --secondary-color: #f4a623;
+    --black: #000;
+    --white: #fff;
+    --height: calc(80vh - 50px);
+    --width: 450px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all .5s ease-in;
+    font-family: var(--main-font-family);
+}
+
+.terms-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 176px 84px 120px;
+    max-width: 1048px;
+    gap: 16px;
+}
+
+.terms-container h2 {
+    color: #214f6f;
+}
+
+.num-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.num-1 p {
+    line-height: 170%;
+}
+
+@media only screen and (max-width: 480px) {
+    .terms-container {
+        padding: 176px 24px 120px;
+    }
+}
