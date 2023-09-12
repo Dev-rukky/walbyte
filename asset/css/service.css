@@ -1,8 +1,18 @@
+:root {
+    --main-font-family: 'Instrument Sans', sans-serif;
+    --primary-color: #214f6f;
+    --secondary-color: #f4a623;
+    --black: #000;
+    --white: #fff;
+    --height: calc(80vh - 50px);
+    --width: 450px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Instrument Sans;
+    font-family: var(--main-font-family);
     list-style: none;
     text-decoration: none;
 }
@@ -195,22 +205,35 @@
 
 .card1 {
     text-align: center;
-    padding: 25px 10px;
-    border-radius: 5px;
-    font-size: 14px;
     display: flex;
-    padding: 32px 24px 30px 24px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 8px;
     border-radius: 8px;
     background: var(--Tertiary, #232323);
+    color: #FFF;
+    padding: 16px;
+}
+
+.card1 p,
+.card2 p,
+.card3 p {
+    font-size: 15px;
+    line-height: 180.5%;
+    font-weight: 400;
+}
+
+.card1 h2,
+.card2 h2,
+.card3 h2 {
+    font-size: 24px;
 }
 
 .card2 {
     text-align: center;
     padding: 25px 10px;
     border-radius: 5px;
-    font-size: 14px;
     display: flex;
     padding: 32px 24px 30px 24px;
     flex-direction: column;
@@ -223,7 +246,6 @@
     text-align: center;
     padding: 25px 10px;
     border-radius: 5px;
-    font-size: 14px;
     display: flex;
     padding: 32px 24px 30px 24px;
     flex-direction: column;
@@ -328,14 +350,22 @@
 
 .service {
     text-align: center;
-    padding: 25px 10px;
     border-radius: 5px;
-    font-size: 14px;
     display: flex;
     padding: 32px 24px 30px 24px;
     flex-direction: column;
     align-items: center;
     background: #FFF;
+}
+
+.service h2 {
+    max-width: 303px;
+    font-size: 24px;
+}
+
+.service p {
+    line-height: 166.5%;
+    font-size: 16px;
 }
 
 .serv {
