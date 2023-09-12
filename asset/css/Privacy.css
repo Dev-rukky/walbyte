@@ -16,7 +16,7 @@
     text-decoration: none;
     box-sizing: border-box;
     transition: all .5s ease-in;
-    font-family: var(--main-font-family);
+    font-family: var(--main-font-family) !important;
 }
 
 .terms-container {
