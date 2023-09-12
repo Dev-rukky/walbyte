@@ -1,11 +1,88 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelectorAll(".nav__link");
 const navMenu = document.getElementById("nav__menus");
+const all = document.querySelector('.all-btn');
+const individual = document.querySelector('.individuals-btn');
+const company = document.querySelector('.organizations-btn');
+const individualFaq = document.querySelector('.accordion-individual');
+const companyFaq = document.querySelector('.accordion-company');
+const buttons = document.querySelectorAll('.accordion-button');
+const contents = document.querySelectorAll('.accordion-content');
+const icons = document.querySelectorAll('.icon');
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("nav-open");
 });
+
+
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+    if (contents[index].style.display === 'block') {
+      contents[index].style.display = 'none';
+    } else {
+      contents[index].style.display = 'block';
+    }
+  });
+});
+
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+
+    button.classList.toggle('active');
+
+    const content = contents[index];
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+
+      contents.forEach((item) => {
+        if (item !== content) {
+          item.style.maxHeight = null;
+        }
+      });
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+    icons[index].classList.toggle('rotate');
+  });
+});
+
+
+
+individual.addEventListener('click', () => {
+  individualFaq.style.display = 'block';
+  companyFaq.style.display = 'none';
+
+  individual.classList.add('individuals-btn-active');
+  company.classList.remove('organizations-btn-active');
+  all.classList.add('all-btn-unactive');
+});
+
+company.addEventListener('click', () => {
+  individualFaq.style.display = 'none';
+  companyFaq.style.display = 'block';
+
+  individual.classList.remove('individuals-btn-active');
+  company.classList.add('organizations-btn-active');
+  all.classList.add('all-btn-unactive');
+});
+
+all.addEventListener('click', () => {
+  individualFaq.style.display = 'block';
+  companyFaq.style.display = 'block';
+
+  individual.classList.remove('individuals-btn-active');
+  company.classList.remove('organizations-btn-active');
+  all.classList.add('all-btn');
+  all.classList.remove('all-btn-unactive');
+});
+
+
+
+
 
 const expertExpandElements = document.getElementsByClassName("carousel__item");
 
