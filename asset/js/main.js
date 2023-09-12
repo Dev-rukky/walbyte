@@ -3,24 +3,60 @@ const navLinks = document.querySelectorAll(".nav__link");
 const navMenu = document.getElementById("nav__menus");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("nav-open");
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("nav-open");
 });
 
-
-// const expertExpand = document.getElementsByClassName("carousel__contents");
-
-// expertExpand.addEventListener("click", () => {
-//     expertExpand.classList.toggle(".carousel__contents-expand");
-// });
-
-// Get all elements with the class "carousel__contents"
 const expertExpandElements = document.getElementsByClassName("carousel__item");
 
-// Add a click event listener to each element
 for (const element of expertExpandElements) {
   element.addEventListener("click", () => {
-    // Toggle the "carousel__contents-expand" class on the clicked element
     element.classList.toggle("carousel__contents-expand");
   });
 }
+
+
+const form = document.getElementById('news-form');
+const email = document.getElementById('email');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  validateInputs();
+});
+
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+
+  errorDisplay.innerText = message;
+  inputControl.classList.add('error');
+  inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+
+  errorDisplay.innerText = '';
+  inputControl.classList.add('success');
+  inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+  const emailValue = email.value.trim();
+
+  if (emailValue === '') {
+    setError(email, 'Email is required');
+  } else if (!isValidEmail(emailValue)) {
+    setError(email, 'Provide a valid email address');
+  } else {
+    setSuccess(email);
+  }
+
+};

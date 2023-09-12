@@ -755,6 +755,31 @@ button.active span:nth-child(2) {
     font-size: 16px;
 }
 
+/* .input-control input:focus {
+    outline-offset: 2px;
+    outline-color: #214F6F;
+} */
+
+
+/* .input-control input:focus {
+    outline: var(--primary-color);
+    outline-offset: 2px;
+} */
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 14px;
+    height: 32px;
+}
+
 .input-control input::placeholder {
     color: rgba(35, 35, 35, 0.40);
     font-size: 16px;
@@ -764,7 +789,7 @@ button.active span:nth-child(2) {
 
 .join {
     display: flex;
-    padding: 10px 16px;
+    padding: 6px 16px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -777,7 +802,7 @@ button.active span:nth-child(2) {
     font-weight: 400;
     line-height: 145.525%;
     position: absolute;
-    
+    transform: translate(350%, -72px);
 }
 
 .newsletter-title {
@@ -787,11 +812,62 @@ button.active span:nth-child(2) {
 
 .newsletter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 0px 84px 120px;
     gap: 170px;
 }
+
+
+.get-started-text p {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 153.525%;
+    text-transform: capitalize;
+}
+
+.get-started-text h1 {
+    color: #FFF;
+    font-size: 45px;
+}
+
+.get-started-text {
+    display: flex;
+    width: 472px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.get-started-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: url(/asset/svgs/Group\ 17.svg),
+        linear-gradient(250deg, rgba(255, 255, 255, 0.20) 32.79%, rgba(255, 255, 255, 0.00) 136.74%),
+        #214F6F;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 24px 32px;
+    height: 226px;
+    gap: 30%;
+}
+
+.get-started {
+    padding: 0px 84px 120px;
+}
+
+.get-started-btn {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+
+
 
 
 
@@ -894,6 +970,10 @@ button.active span:nth-child(2) {
         line-height: 1.4;
     }
 
+    .get-started-text h1 {
+        font-size: 32px;
+    }
+
     .about-text p {
         font-size: 16px;
     }
@@ -913,7 +993,20 @@ button.active span:nth-child(2) {
         max-width: none;
     }
 
+    .newsletter-title {
+        text-align: center;
+        align-items: center;
+    }
 
+
+    .newsletter-text {
+        align-items: center;
+        max-width: none;
+    }
+
+    .get-started-container {
+        gap: 20px;
+    }
 }
 
 
@@ -925,6 +1018,13 @@ button.active span:nth-child(2) {
 
     .feature-container {
         grid-template-columns: 1fr;
+    }
+
+    .get-started-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        justify-content: center;
     }
 }
 
@@ -984,5 +1084,35 @@ button.active span:nth-child(2) {
 
     .expert {
         padding: 0 16px 120px;
+    }
+
+    .join {
+        position: static;
+        display: inline-flex;
+        transform: translate(0);
+        justify-content: center;
+    }
+
+    .newsletter,
+    .get-started {
+        padding: 0px 16px 120px;
+    }
+
+
+
+    .get-started-container {
+        padding: 16px;
+    }
+
+    .get-started-text h1 {
+        font-size: 24px;
+    }
+
+    .get-started-text p {
+        font-size: 14px;
+    }
+
+    .get-started-btn {
+        padding: 8px 12px;
     }
 }
