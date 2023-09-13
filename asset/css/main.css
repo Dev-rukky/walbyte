@@ -988,6 +988,7 @@ footer {
 
     nav {
         justify-content: space-between;
+        column-gap: 0;
     }
 
     .nav__menu ul {
