@@ -1,7 +1,12 @@
+:root {
+    --main-font-family: 'Instrument Sans', sans-serif;
+}
+
+
 * {
     margin: 0;
     padding: 0;
-    font-family: Instrument Sans;
+    font-family: var(--main-font-family)
 }
 
 /* body{
