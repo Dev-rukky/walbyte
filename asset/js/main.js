@@ -13,13 +13,13 @@ const icons = document.querySelectorAll('.icon');
 const passwordInput = document.getElementById("password");
 const passwordToggle = document.getElementById("password-toggle");
 
-passwordToggle.addEventListener("click", () => {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-    } else {
-        passwordInput.type = "password";
-    }
-});
+// passwordToggle.addEventListener("click", () => {
+//   if (passwordInput.type === "password") {
+//     passwordInput.type = "text";
+//   } else {
+//     passwordInput.type = "password";
+//   }
+// });
 
 
 hamburger.addEventListener("click", () => {
