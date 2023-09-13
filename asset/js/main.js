@@ -10,6 +10,18 @@ const buttons = document.querySelectorAll('.accordion-button');
 const contents = document.querySelectorAll('.accordion-content');
 const icons = document.querySelectorAll('.icon');
 
+const passwordInput = document.getElementById("password");
+const passwordToggle = document.getElementById("password-toggle");
+
+passwordToggle.addEventListener("click", () => {
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+});
+
+
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("nav-open");
